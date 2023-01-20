@@ -19,7 +19,6 @@ Write-Host  -ForegroundColor Green "Start OSDCloud"
 Start-OSDCloud -OSLanguage da-dk -OSBuild "22H2" -OSEdition Enterprise -ZTI
 
 #Restart from WinPE
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\BootOrder" -Name "BootOrder" -Value "disk,cdrom,net"
 Write-Host  -ForegroundColor Green "Restarting in 20 seconds!"
 Start-Sleep -Seconds 20
 wpeutil reboot

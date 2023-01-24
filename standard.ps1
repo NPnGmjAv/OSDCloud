@@ -1,5 +1,5 @@
 Write-Host  -ForegroundColor Green "Starting OSDCloud ZTI"
-Start-Sleep -Seconds 5
+Start-Sleep -Seconds 2
 
 #Change Display Resolution for Virtual Machine
 #if ((Get-MyComputerModel) -match 'Virtual') {
@@ -19,6 +19,4 @@ Write-Host  -ForegroundColor Green "Start OSDCloud"
 Start-OSDCloud -OSLanguage en-gb -OSBuild "22H2" -OSEdition Enterprise -ZTI
 
 #Restart from WinPE
-Write-Host  -ForegroundColor Green "Restarting in 20 seconds!"
-Start-Sleep -Seconds 20
 wpeutil reboot
